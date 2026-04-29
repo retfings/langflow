@@ -289,6 +289,32 @@ MODEL_PROVIDER_METADATA: dict[str, Any] = {
             "model_param": "model_id",
         },
     },
+    "MiniMax": {
+        "icon": "MiniMax",
+        "max_tokens_field_name": "max_tokens",
+        "variables": [
+            {
+                "variable_name": "MiniMax API Key",
+                "variable_key": "MINIMAX_API_KEY",
+                "required": True,
+                "is_secret": True,
+                "is_list": False,
+                "options": [],
+                "langchain_param": "api_key",
+                "component_metadata": {
+                    "mapping_field": "api_key",
+                    "required": False,
+                    "advanced": True,
+                    "info": "Falls back to MINIMAX_API_KEY environment variable",
+                },
+            }
+        ],
+        "api_docs_url": "https://www.minimaxi.com/",
+        "mapping": {
+            "model_class": "ChatOpenAI",
+            "model_param": "model",
+        },
+    },
 }
 
 
